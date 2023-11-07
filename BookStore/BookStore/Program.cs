@@ -10,7 +10,6 @@ builder.Services.AddControllers();
 // Register controllers
 builder.Services.AddScoped<IWeatherForecast, WeatherForecastService>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
