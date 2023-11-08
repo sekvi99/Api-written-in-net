@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BookStore.Exceptions;
 using BookStore.Models;
 using BookStore.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +34,10 @@ namespace BookStore.Services
         {
             var bookStore = this.SelectById(id);
 
-            if (bookStore is null) return null;
+            if (bookStore is null)
+            {
+                throw new NotFoundException("Book Store Not Found");
+            }
 
             var bookStoreDto = _mapper.Map<BookStoreDto>(bookStore);
             return bookStoreDto;
@@ -59,7 +63,7 @@ namespace BookStore.Services
             if (_dbContext.BookStores.Any(bs => bs.Name == dto.Name))
             {
                 _logger.LogError("Provided Object Already Exist");
-                throw new Exception("Object already exist");
+                throw new ResourceExistException("Book Store with provided name already exist");
             }
 
             var bookStore = _mapper.Map<BookStore.Entities.BookStore>(dto);
@@ -69,31 +73,35 @@ namespace BookStore.Services
             return bookStore.Id;
         }
 
-        public bool Delete(int id)
+        public void Delete(int id)
         {
             _logger.LogTrace($"Invoked delete of book store with id: {id}");
             var bookStore = this.SelectById(id);
 
-            if (bookStore is null) return false;
+            if (bookStore is null)
+            {
+                throw new NotFoundException("Book Store Not Found");
+            }
 
             _dbContext.Remove(bookStore);
             _dbContext.SaveChanges();
-            return true;
         }
 
-        public bool Update(UpdateBookStoreDto dto, int id)
+        public void Update(UpdateBookStoreDto dto, int id)
         {
             _logger.LogTrace($"Invoked update of book store with id: {id}");
             var bookStore = SelectById(id);
 
-            if (bookStore is null) return false;
+            if (bookStore is null)
+            {
+                throw new NotFoundException("Book Store Not Found");
+            }
 
             bookStore.Name = dto.Name;
             bookStore.Description = dto.Description;
             bookStore.IsActive = dto.IsActive;
 
             _dbContext.SaveChanges();
-            return true;
         }
     }
 }

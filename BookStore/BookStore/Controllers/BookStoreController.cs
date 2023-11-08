@@ -23,36 +23,14 @@ namespace BookStore.Controllers
         [HttpPost]
         public ActionResult CreateBookStore([FromBody] CreateBookStoreDto dto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            try
-            {
-                var id = _service.Create(dto);
-                return Created($"/api/bookstore/{id}", null);
-            }
-            catch (Exception ex)
-            {
-                return Conflict("Provided BookStore already exist");
-            }
+            var id = _service.Create(dto);
+            return Created($"/api/bookstore/{id}", null);
         }
 
         [HttpPut("{id}")]
         public ActionResult UpdateBookStore([FromBody] UpdateBookStoreDto dto, [FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            var isUpdated = _service.Update(dto, id);
-
-            if(!isUpdated)
-            {
-                return NotFound();
-            }
-
+            _service.Update(dto, id);
             return Ok();
         }
 
@@ -67,24 +45,13 @@ namespace BookStore.Controllers
         public ActionResult<BookStoreDto> Get([FromRoute] int id)
         {
             var result = _service.GetById(id);
-            
-            if (result is null)
-            {
-                return NotFound();
-            }
-
             return Ok(result);
         }
 
         [HttpDelete("{id}")]
         public ActionResult Delete(int id) 
         {
-            var isDeleted = _service.Delete(id);
-
-            if (!isDeleted)
-            {
-                return NotFound();
-            }
+            _service.Delete(id);
             return Ok();
         }
     }
