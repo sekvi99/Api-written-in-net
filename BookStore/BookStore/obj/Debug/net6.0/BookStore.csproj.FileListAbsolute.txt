@@ -87,3 +87,8 @@ C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Deb
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\NLog.dll
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\NLog.Extensions.Logging.dll
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\obj\Debug\net6.0\BookStore.MvcApplicationPartsAssemblyInfo.cs

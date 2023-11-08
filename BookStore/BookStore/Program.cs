@@ -18,6 +18,7 @@ builder.Services.AddScoped<IWeatherForecast, WeatherForecastService>();
 builder.Services.AddScoped<IDataSeeder<BookStore.Entities.BookStore>, BookStoreSeeder>();
 builder.Services.AddScoped<IBookStoreService, BookStoreService>();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
+builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(BookStoreMappingProfile)); // New version of autoMapper conf
 
 builder.Logging.ClearProviders();
@@ -29,6 +30,12 @@ var app = builder.Build();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
+
+app.UseSwagger();
+app.UseSwaggerUI(c => 
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookStore API");
+});
 
 app.UseAuthorization();
 
