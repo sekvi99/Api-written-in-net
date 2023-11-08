@@ -13,45 +13,43 @@ namespace BookStore.Controllers
     public class BookStoreController : ControllerBase
     {
         private readonly IBookStoreService _service;
-        private readonly IMapper _mapper;
-        public BookStoreController(IMapper mapper, IBookStoreService service)
+        public BookStoreController(IBookStoreService service)
         {
             _service = service;
-            _mapper = mapper;
         }
 
         [HttpPost]
-        public ActionResult CreateBookStore([FromBody] CreateBookStoreDto dto)
+        public async Task<ActionResult> CreateBookStore([FromBody] CreateBookStoreDto dto)
         {
-            var id = _service.Create(dto);
+            var id = await _service.Create(dto);
             return Created($"/api/bookstore/{id}", null);
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateBookStore([FromBody] UpdateBookStoreDto dto, [FromRoute] int id)
+        public async Task<ActionResult> UpdateBookStore([FromBody] UpdateBookStoreDto dto, [FromRoute] int id)
         {
-            _service.Update(dto, id);
+            await _service.Update(dto, id);
             return Ok();
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<BookStoreDto>> GetAll()
+        public async Task<ActionResult<IEnumerable<BookStoreDto>>> GetAll()
         {
-            var results = _service.GetAll();
+            var results = await _service.GetAll();
             return Ok(results);
         }
 
         [HttpGet("{id}")]
-        public ActionResult<BookStoreDto> Get([FromRoute] int id)
+        public async Task<ActionResult<BookStoreDto>> Get([FromRoute] int id)
         {
-            var result = _service.GetById(id);
+            var result = await _service.GetById(id);
             return Ok(result);
         }
 
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id) 
+        public async Task<ActionResult> Delete(int id) 
         {
-            _service.Delete(id);
+            await _service.Delete(id);
             return Ok();
         }
     }

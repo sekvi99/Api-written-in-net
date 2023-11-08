@@ -5,6 +5,7 @@ using BookStore.Entities;
 using BookStore.Mapper;
 using NLog.Web;
 using BookStore.Middleware;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddControllers();
 
 // Register controllers
 builder.Services.AddDbContext<BookStoreDbContext>();
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);
 builder.Services.AddScoped<IWeatherForecast, WeatherForecastService>();
 builder.Services.AddScoped<IDataSeeder<BookStore.Entities.BookStore>, BookStoreSeeder>();
 builder.Services.AddScoped<IBookStoreService, BookStoreService>();

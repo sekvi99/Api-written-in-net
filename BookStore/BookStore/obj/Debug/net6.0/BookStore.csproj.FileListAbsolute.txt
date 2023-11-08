@@ -92,3 +92,4 @@ C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Deb
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\obj\Debug\net6.0\BookStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

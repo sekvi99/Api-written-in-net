@@ -18,21 +18,21 @@ namespace BookStore.Services
             _logger = logger;
         }
 
-        private BookStore.Entities.BookStore SelectById(int id)
+        private async Task<BookStore.Entities.BookStore> SelectById(int id)
         {
             _logger.LogTrace($"Selecting Book Store with Id: {id}");
-            var bookStore = _dbContext
+            var bookStore = await _dbContext
                 .BookStores
                 .Include(bookStores => bookStores.Address)
                 .Include(bookStores => bookStores.Books)
-                .FirstOrDefault(bookStore => bookStore.Id == id);
+                .FirstOrDefaultAsync(bookStore => bookStore.Id == id);
 
             return bookStore;
         }
 
-        public BookStoreDto GetById(int id)
+        public async Task<BookStoreDto> GetById(int id)
         {
-            var bookStore = this.SelectById(id);
+            var bookStore = await SelectById(id);
 
             if (bookStore is null)
             {
@@ -43,21 +43,20 @@ namespace BookStore.Services
             return bookStoreDto;
         }
 
-        public IEnumerable<BookStoreDto> GetAll() 
+        public async Task<IEnumerable<BookStoreDto>> GetAll() 
         {
             _logger.LogTrace($"Selecting All BookStores From Database");
-            var bookStores = _dbContext
+            var bookStores = await _dbContext
                 .BookStores
                 .Include(bookStores => bookStores.Address)
                 .Include(bookStores => bookStores.Books)
-                .ToList();
+                .ToListAsync();
 
             var bookStoreDtos = _mapper.Map<List<BookStoreDto>>(bookStores);
             return bookStoreDtos;
-
         }
 
-        public int Create(CreateBookStoreDto dto)
+        public async Task<int> Create(CreateBookStoreDto dto)
         {
             _logger.LogTrace($"Invoked method for creating new book Store");
             if (_dbContext.BookStores.Any(bs => bs.Name == dto.Name))
@@ -68,15 +67,15 @@ namespace BookStore.Services
 
             var bookStore = _mapper.Map<BookStore.Entities.BookStore>(dto);
             _dbContext.BookStores.Add(bookStore);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
 
             return bookStore.Id;
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
             _logger.LogTrace($"Invoked delete of book store with id: {id}");
-            var bookStore = this.SelectById(id);
+            var bookStore = await SelectById(id);
 
             if (bookStore is null)
             {
@@ -84,13 +83,13 @@ namespace BookStore.Services
             }
 
             _dbContext.Remove(bookStore);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
-        public void Update(UpdateBookStoreDto dto, int id)
+        public async Task Update(UpdateBookStoreDto dto, int id)
         {
             _logger.LogTrace($"Invoked update of book store with id: {id}");
-            var bookStore = SelectById(id);
+            var bookStore = await SelectById(id);
 
             if (bookStore is null)
             {
@@ -101,7 +100,7 @@ namespace BookStore.Services
             bookStore.Description = dto.Description;
             bookStore.IsActive = dto.IsActive;
 
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
     }
 }

@@ -4,10 +4,10 @@ namespace BookStore.Services.Interfaces
 {
     public interface IBookStoreService
     {
-        BookStoreDto GetById(int id);
-        void Delete(int id);
-        void Update(UpdateBookStoreDto dto, int id);
-        IEnumerable<BookStoreDto> GetAll();
-        int Create(CreateBookStoreDto dto);
+        Task<BookStoreDto> GetById(int id);
+        Task Delete(int id);
+        Task Update(UpdateBookStoreDto dto, int id);
+        Task<IEnumerable<BookStoreDto>> GetAll();
+        Task<int> Create(CreateBookStoreDto dto);
     }
 }

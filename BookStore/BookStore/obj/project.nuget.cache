@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4GOABtOEuqNFbbRSZ56v/N1K8gixZj9zHtjyNoBFothga9taq5PfVTOFwgAQymw5LwjH2UmWJ8peAk/7cVqOmg==",
+  "dgSpecHash": "q8yeBLvnNVrwO/Raws0DpbisJKv+i8iFhKCsxjNLdOZp58ll2okkWp/6vVgzICWLVehR+5puHXDdjhscFYOG/g==",
   "success": true,
   "projectFilePath": "C:\\Users\\vboxuser\\Desktop\\Net api\\Api-written-in-net\\BookStore\\BookStore\\BookStore.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\vboxuser\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.24\\microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
