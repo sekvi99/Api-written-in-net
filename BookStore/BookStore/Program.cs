@@ -4,6 +4,7 @@ using BookStore.Services.Interfaces;
 using BookStore.Entities;
 using BookStore.Mapper;
 using NLog.Web;
+using BookStore.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +17,8 @@ builder.Services.AddDbContext<BookStoreDbContext>();
 builder.Services.AddScoped<IWeatherForecast, WeatherForecastService>();
 builder.Services.AddScoped<IDataSeeder<BookStore.Entities.BookStore>, BookStoreSeeder>();
 builder.Services.AddScoped<IBookStoreService, BookStoreService>();
+builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddAutoMapper(typeof(BookStoreMappingProfile)); // New version of autoMapper conf
-
 
 builder.Logging.ClearProviders();
 builder.WebHost.UseNLog();
@@ -25,6 +26,7 @@ builder.WebHost.UseNLog();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 
