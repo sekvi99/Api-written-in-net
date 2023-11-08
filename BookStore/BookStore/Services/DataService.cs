@@ -4,7 +4,7 @@ using BookStore.Models;
 
 namespace BookStore.Services
 {
-    public abstract class DataService<TBaseDto> where TBaseDto:BaseDto
+    public class DataService<TBaseDto> where TBaseDto:BaseDto
     {
         private readonly IMapper _mapper;
         private readonly BookStoreDbContext _context;
@@ -14,11 +14,11 @@ namespace BookStore.Services
             _context = context;
         }
 
-        public abstract TBaseDto GetById(int id);
-        public abstract TBaseDto UpdateById(int id);
-        public abstract void DeleteById(int id);
-        public abstract IEnumerable<TBaseDto> GetAll();
-        public abstract void Create();
+        public TBaseDto GetById(int id);
+        public TBaseDto UpdateById(int id);
+        public void DeleteById(int id);
+        public IEnumerable<TBaseDto> GetAll();
+        public void Create();
 
     }
 }
