@@ -81,3 +81,5 @@ C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Deb
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.AssemblyReference.cache
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.CopyComplete
 C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\Services\Seeder\SeederData\base-book-stores.json
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\vboxuser\Desktop\Net api\Api-written-in-net\BookStore\BookStore\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
