@@ -26,6 +26,11 @@ namespace BookStore.Middleware
                 await context.Response.WriteAsync(ex.Message);
 
             }
+            catch(UnauthorizedAccessException ex)
+            {
+                context.Response.StatusCode = 401;
+                await context.Response.WriteAsync(ex.Message);
+            }
             catch (Exception ex)
             {
                 _logger.LogError(ex, ex.Message);

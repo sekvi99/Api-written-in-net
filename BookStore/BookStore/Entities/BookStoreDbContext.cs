@@ -9,8 +9,19 @@ namespace BookStore.Entities
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Book> Books { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Users
+            modelBuilder.Entity<User>()
+                .Property(user => user.Username)
+                .IsRequired();
+
+            modelBuilder.Entity<User>()
+                .Property(user => user.Password)
+                .IsRequired();
+
             // BookStore
             modelBuilder.Entity<BookStore>()
                 .Property(bookStore => bookStore.Name)

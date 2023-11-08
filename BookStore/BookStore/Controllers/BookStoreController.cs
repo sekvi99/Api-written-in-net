@@ -2,6 +2,7 @@
 using BookStore.Entities;
 using BookStore.Models;
 using BookStore.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BookStore.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/bookstore")]
     public class BookStoreController : ControllerBase
     {
