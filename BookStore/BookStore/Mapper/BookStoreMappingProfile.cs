@@ -14,6 +14,9 @@ namespace BookStore.Mapper
                 .ForMember(member => member.PostalCode, bookStore => bookStore.MapFrom(s => s.Address.PostalCode));
 
             CreateMap<Book, BookDto>();
+
+            CreateMap<CreateBookStoreDto, BookStore.Entities.BookStore>()
+                .ForMember(m => m.Address, c => c.MapFrom(dto => new Address() { City = dto.City, PostalCode = dto.PostalCode, Street = dto.Street }));
         }
     }
 }

@@ -11,7 +11,8 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.13",
-          "Microsoft.EntityFrameworkCore.Tools": "7.0.13"
+          "Microsoft.EntityFrameworkCore.Tools": "7.0.13",
+          "NLog.Web.AspNetCore": "5.3.5"
         },
         "runtime": {
           "BookStore.dll": {}
@@ -458,6 +459,38 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.1.1"
+          }
+        }
+      },
+      "NLog/5.2.5": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.5.2160"
+          }
+        }
+      },
+      "NLog.Extensions.Logging/5.3.5": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.Logging": "7.0.0",
+          "NLog": "5.2.5"
+        },
+        "runtime": {
+          "lib/net6.0/NLog.Extensions.Logging.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.5.407"
+          }
+        }
+      },
+      "NLog.Web.AspNetCore/5.3.5": {
+        "dependencies": {
+          "NLog.Extensions.Logging": "5.3.5"
+        },
+        "runtime": {
+          "lib/net6.0/NLog.Web.AspNetCore.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.3.5.967"
           }
         }
       },
@@ -942,6 +975,27 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "NLog/5.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mMXtbAxfNzqkXcBjhJ3wN3rH7kwUZ0JL0GrUBI/lso7+tQ/HC4e5SnlmR3R5qQ9zWbqMbjxeH37rIf0yQGWTiA==",
+      "path": "nlog/5.2.5",
+      "hashPath": "nlog.5.2.5.nupkg.sha512"
+    },
+    "NLog.Extensions.Logging/5.3.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7XDC0J2gNTphPmYRJMZeXFhB9fONgF6SVVRw/UKVPaesekCg/i9EL67p7x9fnf7IRD/Yq5btAl3Rae1WUeIDhA==",
+      "path": "nlog.extensions.logging/5.3.5",
+      "hashPath": "nlog.extensions.logging.5.3.5.nupkg.sha512"
+    },
+    "NLog.Web.AspNetCore/5.3.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7RX+/0N1cFcO+N8GcLD93UcAwAQDyBx654Z/ka6qHY4tlrmg1iSgKZB/YJQCOxbfYof4ExCtizrm2vqABYe+Lg==",
+      "path": "nlog.web.aspnetcore/5.3.5",
+      "hashPath": "nlog.web.aspnetcore.5.3.5.nupkg.sha512"
     },
     "System.CodeDom/4.4.0": {
       "type": "package",

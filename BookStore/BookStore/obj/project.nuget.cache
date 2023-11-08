@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "R9IyqaXfyqN7i56caneBev+gw2QWYKgoew17k4uqfzbRQmjCLwqpi/dTmjIPSdFDbowM49ix+IZNtyJXtvbPRA==",
+  "dgSpecHash": "ywuco2LFaYcpbM/DgTCCyPNi1SvmDHK2AXoudgNYNVgGyGiyCjI5H7Ds+Hg1aH246JIMv+3dokKjDdbmWhTJ0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\vboxuser\\Desktop\\Net api\\Api-written-in-net\\BookStore\\BookStore\\BookStore.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,9 @@
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\vboxuser\\.nuget\\packages\\nlog\\5.2.5\\nlog.5.2.5.nupkg.sha512",
+    "C:\\Users\\vboxuser\\.nuget\\packages\\nlog.extensions.logging\\5.3.5\\nlog.extensions.logging.5.3.5.nupkg.sha512",
+    "C:\\Users\\vboxuser\\.nuget\\packages\\nlog.web.aspnetcore\\5.3.5\\nlog.web.aspnetcore.5.3.5.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
     "C:\\Users\\vboxuser\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
