@@ -1,0 +1,175 @@
+{
+  "Restaurants": [
+    {
+      "Name": "Restaurant A",
+      "Description": "A cozy place with a variety of dishes.",
+      "IsActive": true,
+      "ContactEmail": "restaurantA@example.com",
+      "ContactNumber": 1234567890,
+      "Address": {
+        "City": "City A",
+        "Street": "123 Main Street",
+        "PostalCode": "12345"
+      },
+      "Books": [
+        {
+          "Title": "Book 1",
+          "Description": "Description for Book 1",
+          "Price": 19.99,
+        },
+        {
+          "Title": "Book 2",
+          "Description": "Description for Book 2",
+          "Price": 29.99,
+        }
+      ]
+    },
+    {
+      "Name": "Restaurant B",
+      "Description": "A family-friendly restaurant.",
+      "IsActive": true,
+      "ContactEmail": "restaurantB@example.com",
+      "ContactNumber": 2345678901,
+      "Address": {
+        "City": "City B",
+        "Street": "456 Elm Street",
+        "PostalCode": "23456"
+      },
+      "Books": [
+        {
+          "Title": "Book 3",
+          "Description": "Description for Book 3",
+          "Price": 15.99,
+        }
+      ]
+    },
+    {
+      "Name": "Restaurant C",
+      "Description": "An elegant dining experience.",
+      "IsActive": true,
+      "ContactEmail": "restaurantC@example.com",
+      "ContactNumber": 3456789012,
+      "Address": {
+        "City": "City C",
+        "Street": "789 Oak Street",
+        "PostalCode": "34567"
+      },
+      "Books": []
+    },
+    {
+      "Name": "Restaurant D",
+      "Description": "A fusion of international cuisines.",
+      "IsActive": true,
+      "ContactEmail": "restaurantD@example.com",
+      "ContactNumber": 4567890123,
+      "Address": {
+        "City": "City D",
+        "Street": "101 Pine Street",
+        "PostalCode": "45678"
+      },
+      "Books": [
+        {
+          "Title": "Book 4",
+          "Description": "Description for Book 4",
+          "Price": 24.99
+        }
+      ]
+    },
+    {
+      "Name": "Restaurant E",
+      "Description": "A seafood lover's paradise.",
+      "IsActive": true,
+      "ContactEmail": "restaurantE@example.com",
+      "ContactNumber": 5678901234,
+      "Address": {
+        "City": "City E",
+        "Street": "202 Cedar Street",
+        "PostalCode": "56789"
+      },
+      "Books": [
+        {
+          "Title": "Book 5",
+          "Description": "Description for Book 5",
+          "Price": 12.99,
+        }
+      ]
+    },
+    {
+      "Name": "Restaurant F",
+      "Description": "A place for vegetarian delights.",
+      "IsActive": true,
+      "ContactEmail": "restaurantF@example.com",
+      "ContactNumber": 6789012345,
+      "Address": {
+        "City": "City F",
+        "Street": "303 Walnut Street",
+        "PostalCode": "67890"
+      },
+      "Books": [
+        {
+          "Title": "Book 6",
+          "Description": "Description for Book 6",
+          "Price": 9.99
+        }
+      ]
+    },
+    {
+      "Name": "Restaurant G",
+      "Description": "A taste of the Mediterranean.",
+      "IsActive": true,
+      "ContactEmail": "restaurantG@example.com",
+      "ContactNumber": 7890123456,
+      "Address": {
+        "City": "City G",
+        "Street": "404 Maple Street",
+        "PostalCode": "78901"
+      },
+      "Books": []
+    },
+    {
+      "Name": "Restaurant H",
+      "Description": "A barbecue lover's dream.",
+      "IsActive": true,
+      "ContactEmail": "restaurantH@example.com",
+      "ContactNumber": 8901234567,
+      "Address": {
+        "City": "City H",
+        "Street": "505 Birch Street",
+        "PostalCode": "89012"
+      },
+      "Books": [
+        {
+          "Title": "Book 7",
+          "Description": "Description for Book 7",
+          "Price": 17.99
+        }
+      ]
+    },
+    {
+      "Name": "Restaurant I",
+      "Description": "A cafe with a cozy atmosphere.",
+      "IsActive": true,
+      "ContactEmail": "restaurantI@example.com",
+      "ContactNumber": 9012345678,
+      "Address": {
+        "City": "City I",
+        "Street": "606 Willow Street",
+        "PostalCode": "90123"
+      },
+      "Books": []
+    },
+    {
+      "Name": "Restaurant J",
+      "Description": "A sports bar with great food.",
+      "IsActive": true,
+      "ContactEmail": "restaurantJ@example.com",
+      "ContactNumber": 1234567890,
+      "Address": {
+        "City": "City J",
+        "Street": "707 Oak Tree Street",
+        "PostalCode": "12345"
+      },
+      "Books": []
+    }
+  ]
+}

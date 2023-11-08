@@ -1,5 +1,7 @@
 using BookStore.Services;
+using BookStore.Services.Seeder;
 using BookStore.Services.Interfaces;
+using BookStore.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // Register controllers
+builder.Services.AddDbContext<BookStoreDbContext>();
 builder.Services.AddScoped<IWeatherForecast, WeatherForecastService>();
+builder.Services.AddScoped<IDataSeeder<BookStore.Entities.BookStore>, BookStoreSeeder>();
 
 var app = builder.Build();
 
@@ -19,5 +23,12 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+    var seeder = serviceProvider.GetRequiredService<IDataSeeder<BookStore.Entities.BookStore>>();
+    seeder.Seed();
+}
 
 app.Run();
