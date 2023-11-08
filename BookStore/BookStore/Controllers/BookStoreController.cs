@@ -20,6 +20,26 @@ namespace BookStore.Controllers
             _mapper = mapper;
         }
 
+        [HttpPost]
+        public ActionResult CreateBookStore([FromBody] CreateBookStoreDto dto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (_dbContext.BookStores.Any(bs => bs.Name == dto.Name))
+            {
+                return Conflict($"Book Store With Name: {dto.Name} already exist");
+            }
+
+            var bookStore = _mapper.Map<BookStore.Entities.BookStore>(dto);
+            _dbContext.BookStores.Add(bookStore);
+            _dbContext.SaveChanges();
+
+            return Created($"/api/bookstore/{bookStore.Id}", null);
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<BookStoreDto>> GetAll()
         {

@@ -3,6 +3,7 @@ using BookStore.Services.Seeder;
 using BookStore.Services.Interfaces;
 using BookStore.Entities;
 using BookStore.Mapper;
+using BookStore.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<BookStoreDbContext>();
 builder.Services.AddScoped<IWeatherForecast, WeatherForecastService>();
 builder.Services.AddScoped<IDataSeeder<BookStore.Entities.BookStore>, BookStoreSeeder>();
+builder.Services.AddScoped<IDataService<BookStoreDto>, BookStoreService>();
 builder.Services.AddAutoMapper(typeof(BookStoreMappingProfile)); // New version of autoMapper conf
 
 var app = builder.Build();
